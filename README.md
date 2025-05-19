@@ -1,2 +1,9 @@
-# Qusic
-Qusic is an experimental project that uses a Quantum Random Number Generator (QRNG) to convert the random behavior of photons into unique cosmic-inspired music. Each note is generated based on truly unpredictable quantum data, capturing the mysterious beauty of the universe in sou
+## License
+
+Qusic is licensed under a custom license based on **Apache 2.0** with a **Non-Commercial clause**.
+
+- Open-source for learning and research
+- No commercial use allowed
+- Patent rights reserved by the author
+
+See [LICENSE.txt](./LICENSE.txt) for full terms.
