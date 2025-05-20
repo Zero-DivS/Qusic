@@ -204,6 +204,6 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    print("Serial to Flute MIDI Converter (1-9 & A-I)")
+    print("Serial to MIDI Converter (1-9 & A-I)")
     print("------------------------------------------")
     read_from_serial_port(args.port, args.baud, args.duration)
