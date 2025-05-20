@@ -6,15 +6,15 @@ import tkinter as tk
 from tkinter import filedialog
 import sys
 
-def convert_characters_to_midi(char_string, output_filename="output.mid", tempo=120, instrument=73):  # 73 is the MIDI number for flute
+def convert_characters_to_midi(char_string, output_filename="output.mid", tempo=120, instrument=73):  # 73 is the MIDI number for  
     """
-    Convert a string of characters 1-9 and A-I to a MIDI file using flute notes.
+    Convert a string of characters 1-9 and A-I to a MIDI file using   notes.
     
     Parameters:
     char_string (str): String containing digits 1-9 and letters A-I
     output_filename (str): Output MIDI filename
     tempo (int): Tempo in BPM (beats per minute)
-    instrument (int): MIDI instrument number (default: 73 for flute)
+    instrument (int): MIDI instrument number (default: 73 for  )
     """
     # Clean the input string to only contain digits 1-9 and letters A-I (case insensitive)
     valid_chars = []
@@ -39,13 +39,13 @@ def convert_characters_to_midi(char_string, output_filename="output.mid", tempo=
     volume = 100  # 0-127
     
     # Add track name and tempo
-    midi.addTrackName(track, time, "Flute Scale from Characters")
+    midi.addTrackName(track, time, "  Scale from Characters")
     midi.addTempo(track, time, tempo)
     
-    # Set instrument to flute (program change)
+    # Set instrument to   (program change)
     midi.addProgramChange(track, channel, time, instrument)
     
-    # Map 1-9 and A-I to the flute notes (expanded range)
+    # Map 1-9 and A-I to the   notes (expanded range)
     # MIDI note numbers reference: C4 is 60, each semitone up is +1
     note_mapping = {    
         # Original mapping for digits 1-9
@@ -82,7 +82,7 @@ def convert_characters_to_midi(char_string, output_filename="output.mid", tempo=
         midi.writeFile(output_file)
     
     print(f"MIDI file '{output_filename}' created successfully.")
-    print(f"Converted {len(valid_chars)} characters to flute notes.")
+    print(f"Converted {len(valid_chars)} characters to   notes.")
     return valid_chars
 
 def read_from_serial_port(port='COM10', baud_rate=230400, read_duration=30, output_filename=None):
@@ -195,12 +195,12 @@ def read_from_serial_port(port='COM10', baud_rate=230400, read_duration=30, outp
 if __name__ == "__main__":
     import argparse
     
-    parser = argparse.ArgumentParser(description='Convert serial port characters (1-9, A-I) to flute MIDI')
+    parser = argparse.ArgumentParser(description='Convert serial port characters (1-9, A-I) to   MIDI')
     parser.add_argument('--port', default='COM10', help='Serial port (default: COM10)')
     parser.add_argument('--baud', type=int, default=230400, help='Baud rate (default: 230400)')
     parser.add_argument('--duration', type=int, default=30, help='Read duration in seconds (default: 30)')
     parser.add_argument('--tempo', type=int, default=120, help='Tempo in BPM (default: 120)')
-    parser.add_argument('--instrument', type=int, default=73, help='MIDI instrument number (default: 73 - flute)')
+    parser.add_argument('--instrument', type=int, default=73, help='MIDI instrument number (default: 73 -  )')
     
     args = parser.parse_args()
     
